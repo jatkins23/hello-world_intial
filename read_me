@@ -1,0 +1,28 @@
+Karan Singhal and Jon Atkins
+1/27/2014
+
+In this problem we ask you list problems you could solve with a working version
+of fgroups. Be imaginative. For one set of ideas, look up the man page for find,
+especially the -exec option. And it might help you to know that in the arcane
+jargon of computer science, a fingerprint is sometimes called a "message
+digest". This information is especially useful if you also know how to use the
+apropos command.
+
+Please include your answer to part C in your README file
+
+Find: searches directory tree 
+
+              Matches files which are executable and directories which are
+searchable (in a file name  resolution  sense).   This  takes  into
+accountaccess control lists and other permissions artefacts which the -perm test
+ignores. This test makes use of the access(2) system call, and so can be fooled
+by NFS servers which do UID mapping (or root-squashing), since many systems
+implement access(2) in the  client’s kerneland so cannot make use of the UID
+mapping information held on the server. Because this test is based only on the
+result of the access(2) system call, there is no guarantee that a file for which
+this test succeeds can actually be executed.
+
+
+
+Ideas
+
